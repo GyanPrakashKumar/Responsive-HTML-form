@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #f1f1f1;
+            font-family: Verdana, sans-serif;
+        }
+
+        .formDiv {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 50rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px 40px 20px 20px;
+        }
+
+        table tr .heading {
+            text-align: center;
+            font-size: 1rem;
+            padding: 0;
+            text-decoration: underline double;
+        }
+
+        table tr td {
+            padding: 10px;
+            text-align: right;
+        }
+
+        table tr td input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table tr td select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table tr td select option {
+            font-size: 16px;
+        }
+
+        ::placeholder {
+            font-size: 14px;
+            font-family: Verdana, sans-serif;
+        }
+
+        table tr td textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        table tr .buttons {
+            text-align: center;
+        }
+
+        table tr td .btn {
+            width: 10rem;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: #e7564c;
+            color: #fff;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #e13427;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3b8e3b;
+        }
+
+        @media screen and (max-width: 780px) {
+            .formDiv {
+                height: auto;
+                width: 70%;
+                margin: 0 auto;
+
+            }
+
+            table tr {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            table tr td {
+                font-size: 15px;
+                text-align: left;
+                padding-bottom: 5px;
+            }
+            table tr td .btn {
+                width: 7rem;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .formDiv {
+                height: auto;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            table tr td input,
+            table tr td select {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formDiv">
+        <table>
+            <tr>
+                <td colspan="4" class="heading">
+                    <h2>Student Registration Form</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>User Id</td>
+                <td><input type="text" name="uid" placeholder="Plz Enter User Id" required></td>
+                <td>Password</td>
+                <td><input type="password" name="pass" placeholder="Plz Enter ur Password" required></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" placeholder="Plz Enter ur name" required></td>
+                <td>Father's Name</td>
+                <td><input type="text" name="fname" placeholder="Plz Enter ur Father's Name" required></td>
+            </tr>
+            <tr>
+                <td>D.O.B.</td>
+                <td><input type="date" name="dob" value="2000-01-01" required></td>
+                <td>Aadhaar No</td>
+                <td><input type="text" name="aadhaar" placeholder="1234-5678-1234" required></td>
+            </tr>
+            <tr>
+                <td>Mobile.</td>
+                <td><input type="number" name="mob" placeholder="9990046906" required></td>
+                <td>Mail Id</td>
+                <td><input type="email" name="mailid" placeholder="abc@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td>Gender.</td>
+                <td><select name="ge" required>
+                        <option value="">Hello I'm ... </option>
+                        <option value="Male">Male. </option>
+                        <option value="Female">Female. </option>
+                    </select>
+                </td>
+                <td>Qualification</td>
+                <td><select name="quali" required>
+                        <option value="">Qualification</option>
+                        <option value="BCA">BCA.</option>
+                        <option value="B.Tech">B.Tech.</option>
+                        <option value="MCA">MCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td colspan="3"><textarea name="addr" rows=4 cols="60"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="buttons">
+                    <input type="submit" class="btn" value="Register" />
+                    <input type="reset" class="btn" value="Clear" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
